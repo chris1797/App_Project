@@ -1,5 +1,6 @@
 package com.example.first_project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -24,6 +25,22 @@ public class SubActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("TAG", "VALUE");
+            }
+        });
+
+        findViewById(R.id.Btn3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SubActivity.this, MainActivity.class);
+                intent.putExtra("키", "위");
+                startActivity(intent);
+                /**
+                 * 현재 class인 SubActivity.this에서 시작, MainActivity class를 호출하면
+                 * MainActivity의 onCreate()가 실행됨
+                 * 그 다음 onCreate() 내 setContentView(R.layout.activity_main); 창이 뜸
+                 * 그러면 MainActivity를 찾을 수 없다고 logcat에 뜸
+                 *
+                 */
             }
         });
     }
