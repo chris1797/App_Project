@@ -5,22 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:weightSum="1">
+    android:weightSum="10">
 
-    <Button
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="버튼1"
-        android:layout_weight="1"
-        android:onClick="Btn1Click"
-        />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
+        android:layout_weight="5"
         android:text="버튼2"
-        android:id="@+id/Btn2"/>
+        android:id="@+id/Btn2Click"
+        android:onClick="Btn2Click"/>
 
     <Button
         android:layout_width="wrap_content"
